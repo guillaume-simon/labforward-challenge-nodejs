@@ -1,0 +1,14 @@
+{
+  "name": "labforward-challenge-2021",
+  "version": "1.0.0",
+  "description": "Job Application challenge for Labforward (2021)",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Guillaume SIMON",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "node-ipc": "^10.0.2"
+  }
+}
