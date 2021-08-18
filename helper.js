@@ -1,27 +1,26 @@
-// JavaScript source code
-
-export function readBuffer(data, hexDataArray) {
-    for (let i = 0; i < data.length; i++) {
-
-        let hex = data[i].toString(16).toUpperCase();
+/**
+ * Reads buffer byte and returns an hex string.
+ * @param {Buffer byte} data  A byte of data from the buffer to be read.
+ * @return {string} A string representing the data in hexadecimal form.
+ */
+export function bufferToHex(data) {
+    
+        let hex = data.toString(16).toUpperCase();
 
         while (hex.length < 2) {
             hex = "0" + hex;
         }
         hex = "0x" + hex;
-        hexDataArray.push(hex);
 
-        let test = "";
-
-        for (let i in hexDataArray) {
-            test += hexToASCII(hexDataArray[i]);
-        }
-
-        console.log('Received:', hexDataArray, 'is', test);
-    }
+        return hex;
 }
 
-function hexToASCII(hex) {
+/**
+ * Reads an hexadecimal string and returns an ASCII char.
+ * @param {string} hex  A string representing an hexadecimal value.
+ * @return {char} The corresponding ASCII char to hex.
+ */
+export function hexToASCII(hex) {
     if (hex === '0x0A') {
         return "/n";
     } else {
