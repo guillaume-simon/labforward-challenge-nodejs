@@ -1,8 +1,11 @@
 # LabForward Application Challenge - Node.JS
 
-## Behaviour Description
+## Install
 
-Run device-server.js in a Node terminal, and driver-client.js in another.
+- Run `npm install` in the main folder.
+- Run device-server.js in a Node terminal, and driver-client.js in another Node terminal.
+
+## Behaviour Description
 
 - Once the driver manages to connect to the device, it will send the command "S\n" three times. 
 For demo purposes, one byte of data is sent every 2s, and the client waits another 2s before starting to send the command again.
